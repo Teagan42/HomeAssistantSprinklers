@@ -5,6 +5,10 @@ trigger:
     {{
       (states.sensor.weather_temperature.state | float) >= (states.input_slider.temp_extend_duration.state | float)
     }}
+condition:
+  condition: state
+  entity_id: sun.sun
+  state: 'above_horizon'
 action:
   service: input_boolean.turn_on
   data:
