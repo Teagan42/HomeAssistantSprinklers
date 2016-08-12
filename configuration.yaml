@@ -1,0 +1,41 @@
+homeassistant:
+  name: ZZ9 Plural Z Alpha
+  latitude: 39.632321999999995
+  longitude: -105.131914
+  unit_system: imperial
+  time_zone: America/Denver
+
+switch:
+  platform: rpi_gpio
+  ports:
+    11: Front - North
+    12: Front - South
+    13: Back - South
+    14: Back - North
+    15: Back - Garden
+  invert_logic: false
+
+sensor:
+  platform: forecast
+  api_key: !secret forecast_api_key
+  monitored_conditions:
+    - temperature
+    - humidity
+    - precip_intensity
+    - precip_probability
+
+automation: !include_dir_list automation
+
+input_slider: !include input_sliders.yaml
+
+input_boolean: !include input_booleans.yaml
+
+script: !include_dir_named scripts
+
+sun:
+
+logbook:
+
+history:
+
+frontend:
