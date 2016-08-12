@@ -8,11 +8,11 @@ homeassistant:
 switch:
   platform: rpi_gpio
   ports:
-    11: Front - North
-    12: Front - South
-    13: Back - South
-    14: Back - North
-    15: Back - Garden
+    4: Front - North
+    17: Front - South
+    27: Back - South
+    22: Back - North
+    23: Back - Garden
   invert_logic: false
 
 sensor:
