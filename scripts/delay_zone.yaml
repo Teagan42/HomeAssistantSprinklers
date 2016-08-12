@@ -34,8 +34,8 @@ sequence:
       - (reduceCold | float)
       - (reduceRained | float)
       - (reduceMightRain | float) -%}
-    '{%- if duration <= 0.0 -%}
+    {%- if duration <= 0.0 -%}
       00:00
     {%- else -%}
       00:{{ duration | int }}
-    {%- endif -%}'
+    {%- endif -%}
