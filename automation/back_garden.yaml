@@ -1,7 +1,10 @@
 alias: Back - Garden
 trigger:
   platform: time
-  hours: 3, 9, 22
+  hours:
+    - 3
+    - 9
+    - 22
   minutes: 30
 action:
   - service: switch.turn_on
