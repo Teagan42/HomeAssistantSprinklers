@@ -11,7 +11,7 @@ temp_reduce_duration:
   name: Reduce Duration If Under
   min: 60
   max: 100
-  initial: 90
+  initial: 70
   step: 1
   icon: mdi:snowman
   unit_of_measurement: '°F'
