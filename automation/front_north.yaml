@@ -1,7 +1,7 @@
 alias: Front - North
 trigger:
   platform: time
-  hour: 2, 8, 20
+  hours: 2, 8, 20
 action:
   - service: switch.turn_on
     data:
