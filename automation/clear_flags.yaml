@@ -6,6 +6,7 @@ trigger:
     - input_boolean.cold_today
     - input_boolean.might_rain_today
     - input_boolean.rained_today
+  state: 'on'
   for:
     hours: 10
 action:
