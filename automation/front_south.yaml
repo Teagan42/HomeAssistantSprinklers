@@ -1,10 +1,7 @@
 alias: Front - South
 trigger:
   platform: time
-  hours:
-    - 2
-    - 8
-    - 20
+  hours: '/1'
   minutes: 30
 action:
   - service: switch.turn_on
