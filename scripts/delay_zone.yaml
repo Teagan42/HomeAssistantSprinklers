@@ -1,39 +1,41 @@
 sequence:
   delay: >
-    {%- set defaultDuration = states.input_slider.default_duration.state -%}
+    {%- set defaultDuration = states.input_slider.default_duration.state | float -%}
     {%- set reduceCold -%}
-      {%- if states.input_boolean.cold_today.state -%}
+      {%- if states.input_boolean.cold_today.state == 'on' -%}
         {{ states.input_slider.reduce_duration_cold.state }}
       {%- else -%}
         0.0
       {%- endif -%}
     {%- endset -%}
     {%- set reduceRained -%}
-      {%- if states.input_boolean.rained_today.state -%}
+      {%- if states.input_boolean.rained_today.state == 'on' -%}
         {{ states.input_slider.reduce_duration_rained.state }}
       {%- else -%}
         0.0
       {%- endif -%}
     {%- endset -%}
     {%- set reduceMightRain -%}
-      {%- if states.input_boolean.might_rain_today.state -%}
+      {%- if states.input_boolean.might_rain_today.state == 'on' -%}
         {{ states.input_slider.reduce_duration_might_rain.state }}
       {%- else -%}
         0.0
       {%- endif -%}
     {%- endset -%}
     {%- set extendHot -%}
-      {%- if states.input_boolean.hot_today.state -%}
+      {%- if states.input_boolean.hot_today.state == 'on' -%}
         {{ states.input_slider.extend_duration_hot.state }}
       {%- else -%}
         0.0
       {%- endif -%}
     {%- endset -%}
-    {%- set duration = defaultDuration
-      + extendHot
-      - reduceCold - reduceRained - reduceMightRain -%}
-    {%- if duration <= 0.0 -%}
+    {%- set duration = (defaultDuration | float)
+      + (extendHot | float)
+      - (reduceCold | float)
+      - (reduceRained | float)
+      - (reduceMightRain | float) -%}
+    '{%- if duration <= 0.0 -%}
       00:00:00
     {%- else -%}
-      00:{{ duration }}:00
-    {%- endif -%}
+      00:{{ duration | int }}:00
+    {%- endif -%}'
