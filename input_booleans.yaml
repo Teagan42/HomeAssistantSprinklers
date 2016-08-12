@@ -1,0 +1,19 @@
+hot_today:
+  name: It Was Hot Today
+  initial: off
+  icon: mdi:thermometer-lines
+
+cold_today:
+  name: It Was Cold Today
+  initial: off
+  icon: mdi:thermometer-lines
+
+might_rain_today:
+  name: It Might Rain Today
+  initial: off
+  icon: mdi:sleep
+
+rained_today:
+  name: It Rained Today
+  initial: off
+  icon: mdi:sleep
