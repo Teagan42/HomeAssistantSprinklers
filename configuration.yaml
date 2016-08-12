@@ -2,7 +2,7 @@ homeassistant:
   name: ZZ9 Plural Z Alpha
   latitude: 39.632321999999995
   longitude: -105.131914
-  unit_system: imperial
+#  unit_system: imperial
   time_zone: America/Denver
 
 switch:
