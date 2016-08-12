@@ -1,5 +1,5 @@
 sequence:
-  - delay: >
+  delay: >
     {%- set defaultDuration = states.input_slider.default_duration.state -%}
     {%- set reduceCold -%}
       {%- if states.input_boolean.cold_today.state -%}
