@@ -3,7 +3,7 @@ trigger:
   platform: template
   value_template: >
     {{
-      states.sensor.weather_precip_intensity.state >= (states.input_slider.consider_rained.state | float)
+      (states.sensor.weather_precip_intensity.state | float) >= (states.input_slider.consider_rained.state | float)
     }}
 action:
   service: input_boolean.turn_on
