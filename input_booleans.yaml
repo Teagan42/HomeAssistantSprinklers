@@ -11,9 +11,9 @@ cold_today:
 might_rain_today:
   name: It Might Rain Today
   initial: off
-  icon: mdi:sleep
+  icon: mdi:weather-rainy
 
 rained_today:
   name: It Rained Today
   initial: off
-  icon: mdi:sleep
+  icon: mdi:weather-rainy
