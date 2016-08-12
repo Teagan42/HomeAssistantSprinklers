@@ -1,0 +1,12 @@
+alias: Back - North
+trigger:
+  platform: time
+  hour: 1, 7, 21
+action:
+  - service: switch.turn_on
+    data:
+      entity_id: swich.back_north
+  - service: script.delay_zone
+  - service: switch.turn_off
+    data:
+      entity_id: switch.back_north

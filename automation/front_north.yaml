@@ -1,0 +1,12 @@
+alias: Front - North
+trigger:
+  platform: time
+  hour: 2, 8, 20
+action:
+  - service: switch.turn_on
+    data:
+      entity_id: swich.front_north
+  - service: script.delay_zone
+  - service: switch.turn_off
+    data:
+      entity_id: switch.front_north

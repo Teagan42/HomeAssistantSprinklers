@@ -1,0 +1,13 @@
+alias: Back - Garden
+trigger:
+  platform: time
+  hour: 3, 9, 22
+  minute: 30
+action:
+  - service: switch.turn_on
+    data:
+      entity_id: swich.back_garden
+  - service: script.delay_zone
+  - service: switch.turn_off
+    data:
+      entity_id: switch.back_garden
