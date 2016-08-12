@@ -1,4 +1,4 @@
-alias: Hot Today
+alias: Cold Today
 trigger:
   platform: template
   value_template: >
