@@ -13,7 +13,7 @@ switch:
     27: Back - South
     22: Back - North
     23: Back - Garden
-  invert_logic: false
+  invert_logic: true
 
 sensor:
   platform: forecast
