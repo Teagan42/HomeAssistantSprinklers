@@ -1,0 +1,11 @@
+alias: Hot Today
+trigger:
+  platform: template
+  value_template: >
+    {{
+      states.sensor.sensor.weather_temperature.state >= states.input_slider.temp_extend_duration.state
+    }}
+action:
+  service: input_boolean.turn_on
+  data:
+    entity_id: input_boolean.hot_today

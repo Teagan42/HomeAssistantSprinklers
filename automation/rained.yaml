@@ -1,0 +1,11 @@
+alias: Rained
+trigger:
+  platform: template
+  value_template: >
+    {{
+      states.sensor.weather_precip_intensity.state >= states.input_slider.consider_rained.state
+    }}
+action:
+  service: input_boolean.turn_on
+  data:
+    entity_id: input_boolean.rained_today
