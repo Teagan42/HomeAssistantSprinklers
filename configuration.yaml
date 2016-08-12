@@ -32,6 +32,12 @@ input_boolean: !include input_booleans.yaml
 
 script: !include_dir_named scripts
 
+logger:
+  default: error
+  logs:
+    homeassistant.components.automation: debug
+    homeassistant.components.script: debug
+
 sun:
 
 logbook:
