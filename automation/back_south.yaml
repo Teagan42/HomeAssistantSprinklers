@@ -1,11 +1,12 @@
 alias: Back - South
 trigger:
-  platform: time
-  hours:
-    - 2
-    - 9
-    - 21
-  minutes: 0
+  platform: template
+  value_template: >
+    {{
+      now.weekday() % 2 == 0
+      and now.hour in [3, 20]
+      and now.minute == 0
+    }}
 action:
   - service: switch.turn_on
     data:

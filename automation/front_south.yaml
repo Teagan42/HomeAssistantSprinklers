@@ -1,11 +1,12 @@
 alias: Front - South
 trigger:
-  platform: time
-  hours:
-    - 3
-    - 10
-    - 22
-  minutes: 0
+  platform: template
+  value_template: >
+    {{
+      now.weekday() % 2 == 1
+      and now.hour in [3, 20]
+      and now.minute == 0
+    }}
 action:
   - service: switch.turn_on
     data:
