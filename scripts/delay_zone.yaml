@@ -1,4 +1,7 @@
 sequence:
+  - service: switch.turn_on
+    data_template:
+      entity_id: '{{ valve_id }}'
   - delay: >
       {%- set defaultDuration = states.input_slider.default_duration.state | float -%}
       {%- set reduceCold -%}
