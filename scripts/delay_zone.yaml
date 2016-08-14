@@ -42,3 +42,6 @@ sequence:
       {%- else -%}
         00:{{ duration | int }}
       {%- endif -%}
+  - service: switch.turn_off
+    data_template:
+      entity_id: '{{ valve_id }}'
