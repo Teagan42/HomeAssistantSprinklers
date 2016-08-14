@@ -8,22 +8,6 @@ trigger:
       and now.minute == 30
     }}
 action:
-  - event: LOGBOOK_ENTRY
-    event_data:
-      name: Front - North
-      message: is being watered
-      entity_id: switch.front_north
-      domain: switch
-  - service: switch.turn_on
-    data:
-      entity_id: swich.front_north
   - service: script.delay_zone
-  - event: LOGBOOK_ENTRY
-    event_data:
-      name: Front - North
-      message: is done
-      entity_id: switch.front_north
-      domain: switch
-  - service: switch.turn_off
     data:
-      entity_id: switch.front_north
+      valve_id: 'switch.front_north'
