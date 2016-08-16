@@ -10,4 +10,4 @@ trigger:
 action:
   - service: script.delay_zone
     data:
-      valve_id: 'switch.front_north'
+      valve_id: 'switch.front__north'
