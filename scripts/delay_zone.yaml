@@ -1,11 +1,16 @@
 sequence:
   - service: persistent_notification.create
     data_template:
-      message: Turning On {{ valve_id }}
-      title: Script Start
+      message: >
+        Turning On {{ valve_id }}
+      title: >
+        Script Start
   - service: switch.turn_on
     data_template:
-      entity_id: {{ valve_id }}
+      entity_id: >
+        {{
+          valve_id
+        }}
   - delay: >
       {%- set defaultDuration = states.input_slider.default_duration.state | float -%}
       {%- set reduceCold -%}
@@ -48,8 +53,13 @@ sequence:
       {%- endif -%}
   - service: persistent_notification.create
     data_template:
-      message: Turning Off {{ valve_id }}
-      title: Script End
+      message: >
+        Turning Off {{ valve_id }}
+      title: >
+        Script End
   - service: switch.turn_off
     data_template:
-      entity_id: {{ valve_id }}
+      entity_id: >
+        {{
+          valve_id
+        }}
