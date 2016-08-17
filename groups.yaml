@@ -1,0 +1,26 @@
+temperatures:
+  name: Temperature Settings
+  view: no
+  icon: mdi:thermometer-lines
+  entities:
+    - input_slider.temp_extend_duration
+    - input_slider.temp_reduce_duration
+
+precipitation:
+  name: Precipitation Settings
+  view: no
+  icon: mdi:weather-rainy
+  entities:
+    - input_slider.consider_rained
+    - input_slider.consider_might_rain
+
+duration:
+  name: Duration Settings
+  view: no
+  icon: mdi:clock
+  entities:
+    - input_slider.default_duration
+    - input_slider.extend_duration_hot
+    - input_slider.reduce_duration_cold
+    - input_slider.reduce_duration_might_rain
+    - input_slider.reduce_duration_rained
