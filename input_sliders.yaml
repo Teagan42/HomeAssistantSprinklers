@@ -1,5 +1,5 @@
 temp_extend_duration:
-  name: Extend Duration If Over
+  name: Hot
   min: 60
   max: 100
   initial: 90
@@ -8,7 +8,7 @@ temp_extend_duration:
   unit_of_measurement: '°F'
 
 temp_reduce_duration:
-  name: Reduce Duration If Under
+  name: Cold
   min: 60
   max: 100
   initial: 70
@@ -17,7 +17,7 @@ temp_reduce_duration:
   unit_of_measurement: '°F'
 
 consider_rained:
-  name: Consider Rained If
+  name: Rained
   min: 0.01
   max: 2.00
   initial: 0.05
@@ -26,7 +26,7 @@ consider_rained:
   unit_of_measurement: 'inches'
 
 consider_might_rain:
-  name: Consider Might Rain If
+  name: Might Rain
   min: 10
   max: 100
   initial: 65
@@ -35,7 +35,7 @@ consider_might_rain:
   unit_of_measurement: '%'
 
 extend_duration_hot:
-  name: Extend Duration When Hot By
+  name: Extend If Hot
   min: 1
   max: 20
   initial: 5
@@ -44,30 +44,30 @@ extend_duration_hot:
   unit_of_measurement: 'minutes'
 
 reduce_duration_cold:
-  name: Reduce Duration When Cold By
+  name: Reduce If Cold
   min: 1
   max: 20
   initial: 5
   step: 1
-  icon: mdi:clock-out
+  icon: mdi:clock-in
   unit_of_measurement: 'minutes'
 
 reduce_duration_rained:
-  name: Reduce Duration When Rained By
+  name: Reduce If Rained
   min: 1
   max: 20
   initial: 5
   step: 1
-  icon: mdi:clock-out
+  icon: mdi:clock-in
   unit_of_measurement: 'minutes'
 
 reduce_duration_might_rain:
-  name: Reduce Duration When Rained By
+  name: Reduce If Might
   min: 1
   max: 20
   initial: 5
   step: 1
-  icon: mdi:clock-out
+  icon: mdi:clock-in
   unit_of_measurement: 'minutes'
 
 default_duration:
